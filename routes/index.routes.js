@@ -6,6 +6,10 @@ const fileModel = require('../models/files.models');
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.render('login')
+})
+
 // Home route to list user files
 router.get('/home', authMiddleware, async (req, res) => {
   try {
@@ -27,11 +31,9 @@ router.post('/upload', authMiddleware, upload.single('file'), async (req, res) =
       originalname: req.file.originalname,
       user: req.user.userId,
     });
+    
+    res.redirect('/home');
 
-    res.json({
-        success: true,
-        message: 'File uploaded successfully',
-    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'File upload failed', details: err.message });

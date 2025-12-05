@@ -8,8 +8,9 @@
 </head>
 <body class="bg-black bg-grey-100 dark:bg-grey-800 h-screen w-screen flex items-center justify-center">
     
-<form action="/user/register" method="post">
-    <div class=" w-96 grid gap-6 mb-6 md">
+<form action="/user/register" method="post" class="flex flex-col gap-4">
+    <div class="text-white text-2xl mb-4 flex justify-center w-96">Register Here</div>
+    <div class="w-96 grid gap-6 mb-6 md">
         <div>
             <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User name</label>
             <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required name="username" />
@@ -24,9 +25,13 @@
         <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required name="password" />
     </div> 
     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+    <!-- Login Button -->
+    <button type="button" onclick="window.location.href='/user/login'" class="text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-2">
+        Already have an account? Login
+    </button>
 </form>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 </html>
